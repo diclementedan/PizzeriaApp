@@ -1,0 +1,46 @@
+/*
+ * External CSS styles for the graphical interface written in FXMLPizzeria
+ * and Pizzeria controller.
+ *
+ * Created: April 4, 2020
+ * Author: Daniel Di Clemente
+ */
+
+.Container {
+    -fx-background-color: #393e46;
+    -fx-font-family: 'Helvetica';
+    -fx-font-size: 1em;
+}
+
+.VBoxMenu {
+    -fx-border-color: #00adb5;
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+    -fx-text-fill: #00adb5;
+}
+
+.labels, .mediumLabel, .bigLabel {
+    -fx-font-family: 'Brush Script MT';
+    -fx-font-size: 2em;
+    -fx-text-fill: #00adb5;
+}
+
+.radio-button, .check-box {
+    -fx-text-fill: #00adb5;
+}
+
+.bigLabel {
+    -fx-font-size: 3em;
+    -fx-padding: 15px;
+}
+
+.TextArea {
+    -fx-border-color: #00adb5;
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-font-family: 'Courier New';
+    -fx-padding: 5px;
+    -fx-text-fill: #00adb5;
+}

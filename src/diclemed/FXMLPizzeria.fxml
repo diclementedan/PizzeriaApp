@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox id="VBox" prefHeight="550.0" prefWidth="600.0" styleClass = "Container"
+      alignment = "CENTER" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller = "diclemed.PizzeriaController">
+    <stylesheets>
+        <URL value="@/diclemed/css/style.css"/>
+    </stylesheets>
+    
+    <MenuBar>
+        <Menu fx:id = "mnuFile" text = "_File" mnemonicParsing = "true">
+            <MenuItem fx:id = "mnuExit" text = "_Exit" mnemonicParsing = "true">
+            </MenuItem>
+        </Menu>
+    </MenuBar>
+    
+    <Label fx:id = "lblHeader" text = "Dan's Pizzeria (Assign. 4)" 
+           styleClass = "bigLabel"/>
+    
+    <HBox alignment = "CENTER" spacing = "25">
+        <VBox styleClass = "VBoxMenu">
+            <fx:define>
+                <ToggleGroup fx:id = "grpPizzaSize"/>
+            </fx:define>
+            <children>
+                <Label text = "Pizza Sizes" styleClass = "labels"/>
+                <RadioButton fx:id = "rdoSmall" text = "Small" 
+                             toggleGroup = "$grpPizzaSize"/>
+                <RadioButton fx:id = "rdoMed" text = "Medium" 
+                             toggleGroup = "$grpPizzaSize"/>
+                <RadioButton fx:id = "rdoLrg" text = "Large" 
+                             toggleGroup = "$grpPizzaSize"/>
+                <TextField fx:id = "txtPizzaQty" 
+                           promptText = "Number of pizzas"/>
+            </children>          
+        </VBox>
+        
+        <VBox styleClass = "VBoxMenu">
+            <children>
+                <Label fx:id = "lblToppings" text = "Toppings" 
+                       styleClass = "labels"/>
+                <CheckBox fx:id = "chkCheese" text = "_Cheese"
+                          mnemonicParsing = "true"/>
+                <CheckBox fx:id = "chkPepp" text = "_Pepperoni"
+                          mnemonicParsing = "true"/>
+                <CheckBox fx:id = "chkMush" text = "_Mushrooms"
+                          mnemonicParsing = "true"/>
+                <CheckBox fx:id = "chkOlive" text = "_Olives"
+                          mnemonicParsing = "true"/>
+            </children>
+        </VBox>
+        
+        <VBox styleClass = "VBoxMenu">
+            <fx:define>
+                <ToggleGroup fx:id = "grpDrinks"/>
+            </fx:define>
+            <children>
+                <Label fx:id = "lblDrinks" text = "Drinks"
+                       styleClass = "labels"/>
+                <RadioButton fx:id = "rdoCoke" text = "Coke"
+                             toggleGroup = "$grpDrinks" />
+                <RadioButton fx:id = "rdoJuice" text = "Juice"
+                             toggleGroup = "$grpDrinks" />
+                <RadioButton fx:id = "rdoChocMilk" text = "Chocolate Milk"
+                             toggleGroup = "$grpDrinks" />
+                <TextField fx:id = "txtDrinkQty" 
+                           promptText = "Number of drinks"/>
+            </children>
+        </VBox>
+    </HBox>
+    
+    <VBox styleClass = "VBoxReceipt" alignment = 'CENTER'>
+        <Label fx:id = "lblReceiptTitle" text = "Ordered Items" 
+               styleClass = "mediumLabel"/>
+        <TextArea fx:id = "txaReceipt" styleClass = "TextArea" 
+                  prefRowCount= "15" prefColumnCount= "50"/>
+        <HBox alignment = "CENTER" spacing = "25">
+            <Button fx:id = "btnOk" onAction = "#buttonAction" text = "OK"/>
+            <Button fx:id = "btnCancel" onAction = "#buttonAction" 
+                    text = "Cancel"/>
+        </HBox>
+    </VBox>
+</VBox>
